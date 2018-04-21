@@ -54,23 +54,23 @@ function getOutput(){
 	}
   };
 
-	// Spotify function 
-	 function spotifySong() {
+// Spotify function 
+	function spotifySong() {
 		var spotify = new Spotify(keys.spotify);
-		 const params = {
-			 type: 'track',
-			 query: songTitle
+		 		const params = {
+			 	type: 'track',
+				 query: songTitle		 
 		 };
-		 spotify.search(params, function(err, data) {
-			 if(err) {
-				 console.log(err);
-			 } else {
+
+		 	spotify.search(params, function(err, data) {
+			if(err) {
+			console.log(err);
+			} else {
 				
 				 var songArtist =data.tracks.items[0].artists[0].name;
 				 var songAlbum =data.tracks.items[0].album.name;
 				 var songTitle =data.tracks.items[0].name;
-
-
+			
 				 console.log("artists(s): " + songArtist);
 				 console.log("album: " + songAlbum);
 				 console.log("title: " + songTitle);
@@ -79,7 +79,7 @@ function getOutput(){
 		 }
   
 
-// Function for running a Twitter Search
+// Twitter function  
 function retrieveTweets() {
   var client = new Twitter(keys.twitter);
   var params = {
