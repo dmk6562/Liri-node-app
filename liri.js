@@ -5,7 +5,7 @@ require("dotenv").config();
 var Twitter = require('twitter');
 
 // Access spotify API keys information
-var Spotify = require("node-spotify-api");
+var Spotify = require('node-spotify-api');
 
 // Importing the request npm package.
 var request = require("request");
@@ -54,40 +54,30 @@ function getOutput(){
 	}
   };
 
-  // Spotify function 
-  function spotifySong() {
-	var spotify = new Spotify(keys.spotify);
+	// Spotify function 
+	 function spotifySong() {
+		var spotify = new Spotify(keys.spotify);
+		 const params = {
+			 type: 'track',
+			 query: songTitle
+		 };
+		 spotify.search(params, function(err, data) {
+			 if(err) {
+				 console.log(err);
+			 } else {
+				
+				 var songArtist =data.tracks.items[0].artists[0].name;
+				 var songAlbum =data.tracks.items[0].album.name;
+				 var songTitle =data.tracks.items[0].name;
 
-	spotify.search({
-		type: 'track',
-		query: songTitle,
-		limit: 1
-	},
-  
-	  function(err, data) {
-		if (err) {
-		  console.log("Error occurred: " + err);
-		  return;
-		} else {
-			console.log(data);
-  
-		var songArtist = data.tracks.items;
-		var songAlbum = data.tracks.items;
-		var songTitle = data.track.items;
-		// var songPreview =data.track.items[0].title;
 
-		
+				 console.log("artists(s): " + songArtist);
+				 console.log("album: " + songAlbum);
+				 console.log("title: " + songTitle);
+			 }
+			 });
+		 }
   
-		
-		  console.log("artist(s): " + JSON.stringify(songArtist));
-		  console.log("song name: " + songTitle);
-		  console.log("preview song: " + songPreview);
-		  console.log("album: " + songAlbum);
-		  console.log("-----------------------------------");
-		}
-	  }
-	);
-  };
 
 // Function for running a Twitter Search
 function retrieveTweets() {
@@ -135,18 +125,18 @@ function retrieveMovie() {
 };
 
 // Do what it says function 
-function fetchRandom() {
-  fs.readFile("random.txt", "utf8", function(error, data) {
-	  if(err){
-	console.log('you have an error');
-	  } else {
-		input = data.split(",");
-		userInput = input[0]; 
-		songTitle = input[1];
-		getOutput();
-		console.log(data);
-    }
-  });
+function fetchRandom(){
+	fs.readFile('random.txt','utf8',function(err,data){
+			data = data.split(",");
+			userInput = data[0];
+			songTitle = data[1];
+		
+			if(userInput === "spotify-this-song" && songTitle === "undefined"){
+					spotifySong("Hello")
+			} else if (userInput === "spotify-this-song"){
+					spotifySong(songTitle);
+			}
+	});
 };
 
 
