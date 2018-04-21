@@ -139,10 +139,4 @@ function fetchRandom(){
 	});
 };
 
-//writing to log.txt file
-var fetchArtistNames = function(artist) {
-	return artist.name;
-}
-
-
 
