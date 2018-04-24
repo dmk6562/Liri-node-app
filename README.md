@@ -7,11 +7,11 @@ LIRI is like iPhone's SIRI. However, LIRI is a _Language_ Interpretation and Rec
 
 * This will show your last 20 tweets and when they were created at in your terminal/bash window.
 
-![alt text](https://github.com/dmk6562/Liri-node-app/blob/master/Node-Liri-Images/node-tweets.PNG "My-tweets screenshot")
+![node-tweets](https://user-images.githubusercontent.com/33642075/39161050-bc28ef36-473c-11e8-8b37-01f9641bbb21.PNG)
 
 2. node liri.js spotify-this-song
 
-![alt text](https://github.com/dmk6562/Liri-node-app/blob/master/Node-Liri-Images/node%20spotify.PNG "Spotify-this-song screenshot")
+![node spotify](https://user-images.githubusercontent.com/33642075/39161080-dc2d6276-473c-11e8-9469-1580ec948e6d.PNG)
 
 * This shows the following information about the song in your terminal/bash window
 
@@ -28,7 +28,7 @@ LIRI is like iPhone's SIRI. However, LIRI is a _Language_ Interpretation and Rec
 
 * This will output the following information to your terminal/bash window:
 
-![alt text](https://github.com/dmk6562/Liri-node-app/blob/master/Node-Liri-Images/node%20movie-this.PNG "Movie-this screenshot")
+![node movie-this](https://user-images.githubusercontent.com/33642075/39161092-e79b4380-473c-11e8-8b48-3329829827c9.PNG)
 
      ```
        * Title of the movie.
@@ -42,7 +42,7 @@ LIRI is like iPhone's SIRI. However, LIRI is a _Language_ Interpretation and Rec
      ```
 4. node liri.js do-what-it-says.
 
-![alt text](https://github.com/dmk6562/Liri-node-app/blob/master/Node-Liri-Images/node-dowhatitsays.PNG "Do-what-it-says screenshot")
+![node-dowhatitsays](https://user-images.githubusercontent.com/33642075/39161102-fc112fa0-473c-11e8-8bb2-233d29b9b5b0.PNG)
 
  * This should run `spotify-this-song` for "I Want it That Way," in `random.txt`.
 
