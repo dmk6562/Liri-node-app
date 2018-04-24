@@ -9,7 +9,6 @@ LIRI is like iPhone's SIRI. However, LIRI is a _Language_ Interpretation and Rec
 
 ![node-tweets](https://user-images.githubusercontent.com/33642075/39161050-bc28ef36-473c-11e8-8b37-01f9641bbb21.PNG)
 
-
 2. node liri.js spotify-this-song
 
 ![node spotify](https://user-images.githubusercontent.com/33642075/39161080-dc2d6276-473c-11e8-9469-1580ec948e6d.PNG)
